@@ -1,3 +1,13 @@
+/*
+    Author:       Ibrahim Esseddyq [ibes-sed]
+    Contributors: [none]
+
+    Description:
+    Here are some renaming of types just for readability.
+
+    Specs:
+    no specs
+*/
 #ifndef TYPES_H
 #define TYPES_H
 #define uint8 unsigned char 
