@@ -15,30 +15,26 @@ class cp_info
 {
     public:
         uint8 tag;
-        uint8 info[];
-}
-class attribute_info // *1
-{
-    uint16  attribute_name_index;
-    uint32  attribute_length;/
-    uint8   info[attribute_length];
-}
+        // uint8 info[];
+};
+
+
 class method_info
 {
     uint16          access_flags;
     uint16          name_index;
     uint16          descriptor_index;
     uint16          attribute_count;
-    attribute_info  attributes[attribute_count]; // *1
-}
+    // attribute_info  attributes[attribute_count]; // *1  // TODO: make it usable later, a prototype for now
+};
 class field_info
 {
     uint16          access_flags;
     uint16          name_index;
     uint16          descriptor_index;
     uint16          attribute_count;
-    attribute_info  attributes[attribute_count]; // *1
-}
+    // attribute_info  attributes[attribute_count]; // *1 // TODO: make it usable later, a prototype for now
+};
 class classfile
 {
     public:
@@ -46,19 +42,19 @@ class classfile
         uint16          major_version;
         uint16          minor_version;
         uint16          constant_pool_count;
-        cp_info         constant_pool[constant_pool_count - 1];
+        // cp_info         constant_pool[constant_pool_count - 1]; // TODO: make it usable later, a prototype for now
         uint16          access_flags;
         uint16          this_class;
         uint16          super_class;
         uint16          interfaces_count;
-        uint16          interfaces[interfaces_count];
+        // uint16          interfaces[interfaces_count]; // TODO: make it usable later, a prototype for now
         uint16          fields_count;
-        field_info      fields[fields_count];
+        // field_info      fields[fields_count]; // TODO: make it usable later, a prototype for now
         uint16          methods_count;
-        method_info     methods[methods_count];
+        // method_info     methods[methods_count]; // TODO: make it usable later, a prototype for now
         uint16          attribute_count;
-        attribute_info  attributes[attribute_count]; //*1
-}
+        // attribute_info  attributes[attribute_count]; //*1  // TODO: make it usable later, a prototype for now
+};
 /*
     //Specs references//
 
@@ -73,7 +69,7 @@ class classfile
     Comments:
         *1 : 
             So there's 23 attributes in total 17 of them are critical,
-            for seek of simplicity i will not implemet all of them just the 
+            for seek of simplicity i will not implement all of them just the 
             necessary ones, for our case the JVM necessite 5 attributes:
                 - ConstantsValue
                 - Code

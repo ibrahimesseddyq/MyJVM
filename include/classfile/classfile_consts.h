@@ -65,7 +65,7 @@
 
     Specs:
     JSR 337:JVM Specs 8 SE
-        [BT_DESC] : chapter 4.3, page 77;
+        [BT_DESC]   : chapter 4.3, page 77;
         [ACC_MOD]   : chapter 4.1, page 71-72
                       chapter 4.5, page 91
                       chapter 4.6, page 96;
