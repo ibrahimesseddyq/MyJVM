@@ -11,7 +11,7 @@
 #ifndef VM_H
 #define VM_H
 #include <stack>
-typedef stack<uint8> stack8
+typedef std::stack<uint8> stack8
 
     class x_cpu
     {
