@@ -11,7 +11,7 @@
 */
 #ifndef CLASSFILE_H
 #define CLASSFILE_H
-class cp_info 
+class cpInfo 
 {
     public:
         uint8 tag;

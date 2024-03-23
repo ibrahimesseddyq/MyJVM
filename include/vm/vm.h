@@ -13,14 +13,14 @@
 #include <stack>
 typedef std::stack<uint8> stack8
 
-    class x_cpu
+    class xCpu
     {
         stack8 r1; // TODO: use queue instead of stack
         stack8 r2; // TODO: use queue instead of stack
         stack8 r3; // TODO: use queue instead of stack
 
         uint32 PC;
-    }
+    };
 
     // mstack represents the main stack 
     //TODO 
@@ -29,10 +29,10 @@ typedef std::stack<uint8> stack8
     class vm
     {
         public:
-            x_cpu  cpu;  
+            xCpu  cpu;  
             stack8 mstack;
             //heap  mheap;
-    }
+    };
     /*
         take a lot at powerset construction
             Ref:
